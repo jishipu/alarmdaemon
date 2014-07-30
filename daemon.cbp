@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="daemon" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/daemon" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+				<Linker>
+					<Add option="-L/usr/lib64/mysql" />
+					<Add option="-lmysqlclient" />
+					<Add option="-lpthread" />
+					<Add option="/usr/local/lib/libev.a" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/daemon" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-L/usr/lib64/mysql" />
+					<Add option="-lmysqlclient" />
+					<Add option="-lpthread" />
+					<Add option="/usr/local/lib/libev.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="common.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="common.h" />
+		<Unit filename="functions.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="functions.h" />
+		<Unit filename="logger.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="logger.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="monitor_item.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="monitor_item.h" />
+		<Unit filename="mysql_pu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mysql_pu.h" />
+		<Unit filename="process.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="process.h" />
+		<Extensions>
+			<envvars />
+			<code_completion />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

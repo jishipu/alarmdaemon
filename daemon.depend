@@ -1,0 +1,62 @@
+# depslib dependency file v1.0
+1404960155 source:/home/jishipu/linux-c/daemon/common.c
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<sys/file.h>
+	<fcntl.h>
+	"common.h"
+
+1404903672 /home/jishipu/linux-c/daemon/common.h
+
+1404960178 source:/home/jishipu/linux-c/daemon/logger.c
+	<fcntl.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<unistd.h>
+	<time.h>
+	<errno.h>
+	<syslog.h>
+	<stdarg.h>
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	"logger.h"
+
+1404903853 /home/jishipu/linux-c/daemon/logger.h
+	<errno.h>
+	<stdarg.h>
+
+1404960230 source:/home/jishipu/linux-c/daemon/main.c
+	<sys/types.h>
+	<sys/stat.h>
+	<sys/wait.h>
+	<fcntl.h>
+	<unistd.h>
+	<errno.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"common.h"
+	"logger.h"
+	"process.h"
+
+1404958930 /home/jishipu/linux-c/daemon/process.h
+
+1404960302 source:/home/jishipu/linux-c/daemon/process.c
+	<sys/types.h>
+	<sys/ipc.h>
+	<sys/msg.h>
+	<unistd.h>
+	<signal.h>
+	<pthread.h>
+	<errno.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"common.h"
+	"logger.h"
+
