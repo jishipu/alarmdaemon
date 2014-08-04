@@ -1,9 +1,9 @@
-1.½âÑ¹libev-4.15.tar.gz,½øÈëlibev-4.15
-  ./configure
-  make
-  make install
-2.¼ÙÈçmysql°²×°Ä¿Â¼ÔÚ/data/webserver/mysql
-  ln -s /data/webserver/mysql/include /usr/include/mysql
-  ln -s /data/webserver/mysql/lib     /usr/lib64/mysql  #ÔËĞĞÔÚ64Î»²Ù×÷ÏµÍ³ÏÂ
-  ÔÚ/etc/ld.so.confÖĞÌí¼Ó/usr/lib64/mysql  ÔËĞĞldconfig
-3.½øÈëalarmdaemonÄ¿Â¼£¬ÔËĞĞmake,Éú³ÉµÄÔËĞĞ³ÌĞòÔÚbinÄ¿Â¼ÏÂ
+1.è§£å‹libev-4.15.tar.gz,è¿›å…¥libev-4.15
+./configure
+make
+make install
+2.å‡å¦‚mysqlå®‰è£…ç›®å½•åœ¨/data/webserver/mysql
+ln -s /data/webserver/mysql/include /usr/include/mysql
+ln -s /data/webserver/mysql/lib     /usr/lib64/mysql  #è¿è¡Œåœ¨64ä½æ“ä½œç³»ç»Ÿä¸‹
+åœ¨/etc/ld.so.confä¸­æ·»åŠ /usr/lib64/mysql  è¿è¡Œldconfig
+3.è¿›å…¥alarmdaemonç›®å½•ï¼Œè¿è¡Œmake,ç”Ÿæˆçš„è¿è¡Œç¨‹åºåœ¨binç›®å½•ä¸‹
