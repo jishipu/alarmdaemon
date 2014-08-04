@@ -63,14 +63,14 @@ int main()
 		//enter child proc
 		/********/
 		process();
-        //do something long time
-        /********/
+                //do something long time
+                /********/
 		exit(EXIT_SUCCESS);
 	}
 	debug("pid2=%d\n",pid);
-    /********/
-     //do something long time
-    /********/
+        /********/
+        //do something long time
+        /********/
 	waitpid(pid,NULL,0);
 	removepid(YAKMSG_PID);
 
