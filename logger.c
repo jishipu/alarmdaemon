@@ -77,7 +77,12 @@ void logger(char *param,const char *fmt,...){
 }
 
 static void logging(char *param,const char *fmt,va_list ap){
-	if(logfd==-1 || strcmp(curdate, logdate)>0) openlogger();
+	if(logfd==-1) {
+	   openlogger();
+	} else if(strcmp(curdate, logdate)>0) {
+	   closelogger();
+	   openlogger();
+	}
 
 	struct flock lock;
 	lock.l_whence=SEEK_SET;
