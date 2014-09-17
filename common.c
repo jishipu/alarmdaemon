@@ -28,11 +28,11 @@ int isrunning(char *path){
 	int rs;
 	if((fd=open(path,O_RDONLY))<0) return -1;
 	if(flock(fd,LOCK_EX|LOCK_NB)==-1)
-        rs=0;
+            rs=0;
 	else{
-        flock(fd,LOCK_UN|LOCK_NB);
-        rs=-1;
-    }
+            flock(fd,LOCK_UN|LOCK_NB);
+            rs=-1;
+        }
 	close(fd);
 	return rs;
 }
