@@ -27,14 +27,14 @@ pthread_t monthrd, workthrd;
 pthread_mutex_t		item_lock;
 
 void process(){
-    sigset_t set;
+        sigset_t set;
 	sigemptyset(&set);
 	sigaddset(&set,SIGTERM);
 	sigaddset(&set,SIGHUP);
 	sigprocmask(SIG_BLOCK,&set,NULL);
 
 	if(pthread_create(&monthrd,NULL,(void*)monitor,NULL))
-        err_quit("pthread_create: monitor");
+            err_quit("pthread_create: monitor");
 	if(pthread_create(&workthrd,NULL,(void*)worker,NULL))
 	    err_quit("pthread_create: worker");
 
@@ -62,7 +62,7 @@ static void monitor(){
 			sigemptyset(&action.sa_mask);
 			action.sa_handler=SIG_IGN;
 			sigaction(SIGHUP,&action,NULL);
-		    //SIGHUP Ò»°ãÊÇÖØĞÂ¼ÓÔØÅäÖÃĞÅÏ¢
+		        //SIGHUP ä¸€èˆ¬æ˜¯é‡æ–°åŠ è½½é…ç½®ä¿¡æ¯
 		}
 		sleep(1);
 		debug("monitor in process\n");
@@ -76,7 +76,7 @@ static void worker(){
 
     ev_periodic p;
     struct ev_loop *loop = ev_default_loop(0);
-    ev_periodic_init(&p, check_item_cb, 0, 300, 0); //5·ÖÖÓ¼ì²éÒ»´ÎÊı¾İ¿â£¬¿´ÊÇ·ñÓĞ¸ü¸ÄÅäÖÃ
+    ev_periodic_init(&p, check_item_cb, 0, 300, 0); //5åˆ†é’Ÿæ£€æŸ¥ä¸€æ¬¡æ•°æ®åº“ï¼Œçœ‹æ˜¯å¦æœ‰æ›´æ”¹é…ç½®
     ev_periodic_start(loop, &p);
     ev_run(loop, 0);
 }
