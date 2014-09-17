@@ -19,7 +19,7 @@ static void err_quit(char *msg){
 
 int main()
 {
-    int i;
+        int i;
 	for(i=0;i<5;i++){
 		if(isrunning(YAKMSG_PID)==-1) break;
 		sleep(1);
