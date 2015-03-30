@@ -19,7 +19,7 @@ static void err_quit(char *msg){
 
 int main()
 {
-        int i;
+    int i;
 	for(i=0;i<5;i++){
 		if(isrunning(YAKMSG_PID)==-1) break;
 		sleep(1);
@@ -63,14 +63,14 @@ int main()
 		//enter child proc
 		/********/
 		process();
-                //do something long time
-                /********/
+        //do something long time
+        /********/
 		exit(EXIT_SUCCESS);
 	}
 	debug("pid2=%d\n",pid);
-        /********/
-        //do something long time
-        /********/
+    /********/
+    //do something long time
+    /********/
 	waitpid(pid,NULL,0);
 	removepid(YAKMSG_PID);
 

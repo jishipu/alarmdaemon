@@ -20,18 +20,18 @@ static void logging();
 
 static void err_quit(char *msg){
 	error_ret(msg);
-        exit(EXIT_FAILURE);
+    exit(EXIT_FAILURE);
 }
 
 static void error_ret(char *msg){
 	openlog("logger",LOG_PID,LOG_DAEMON);
 	syslog(LOG_ERR,"%s:%s\n",msg,strerror(errno));
 	closelog();
-        errno=0;
+    errno=0;
 }
 
 static int gettime(char *buf){
-        time_t t=time(NULL);
+    time_t t=time(NULL);
 	struct tm *time=localtime(&t);
 	char mon[3],mday[3],hour[3],min[3],sec[3];
 	int year = time->tm_year + 1900;
@@ -46,7 +46,7 @@ static int gettime(char *buf){
 }
 
 static int getlogname(char *buf){
-        time_t t=time(NULL);
+    time_t t=time(NULL);
 	struct tm *time=localtime(&t);
 	char mon[3],mday[3];
 	int year = time->tm_year + 1900;
@@ -63,8 +63,8 @@ static void ntoa(int n,char *ch){
 }
 
 void openlogger(){
-        char buf[LOG_BUF];
-        getlogname(buf);
+    char buf[LOG_BUF];
+    getlogname(buf);
 	logfd=open(buf,O_CREAT|O_WRONLY|O_APPEND,0644);
 	if(logfd<0) error_ret("open");
 }

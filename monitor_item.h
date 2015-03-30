@@ -12,9 +12,9 @@ typedef struct item MONITOR_ITEM;
 struct item {
 	unsigned int        id;
 	char	            name[60];
-	int		    interval;      //执行间隔
+	int		            interval;      //执行间隔
 	struct ev_loop*     loop;
-        struct ev_async*     async_watcher;
+    struct ev_async*    async_watcher;
 	enum status_item    status;
 };
 
